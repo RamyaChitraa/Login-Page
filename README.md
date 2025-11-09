@@ -92,4 +92,4 @@ Then open http://localhost:3000
 
 🔗 View Deployed Project
 
-(Update this link once deployed on Vercel.)
+(https://login-page-9oms.vercel.app/)
