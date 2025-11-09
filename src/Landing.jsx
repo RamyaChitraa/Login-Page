@@ -3,12 +3,18 @@ import { useLocation } from "react-router-dom";
 function Landing() {
   const data = useLocation();
 
+  // Function to prevent default link behavior
+  const handleLinkClick = (e) => {
+    e.preventDefault();
+    alert("Please contact support to recover your email or phone number.");
+  };
+
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/background.jpg" // your queen image
+          src="/background.jpg"
           alt="Netflix Background"
           className="w-full h-full object-cover opacity-60"
         />
@@ -76,7 +82,8 @@ function Landing() {
 
           {/* Forgot Link */}
           <a
-            href="#"
+            href="/"
+            onClick={handleLinkClick}
             className="block text-center text-blue-700 text-sm mt-4 hover:underline"
           >
             I can’t remember my email address or phone number.
